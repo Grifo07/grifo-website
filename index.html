@@ -86,11 +86,15 @@
     /* Turn off parallax scrolling for tablets and phones */
     @media only screen and (max-device-width: 1600px) {
 
-      .bgimg-1,
+      .bgimg-1 {
+        background-attachment: scroll;
+        min-height: 600px;
+      }
+
       .bgimg-2,
       .bgimg-3 {
         background-attachment: scroll;
-        min-height: 400px;
+        min-height: 300px;
       }
     }
   </style>
@@ -128,9 +132,11 @@
     <div class="w3-display-middle w3-center">
       <!-- <div class="w3-black w3-xlarge w3-wide w3-animate-opacity" style="padding: 10px 20px;">Eduardo
         Grifo</div> -->
-      <div class="w3-text-white w3-xlarge w3-wide w3-animate-opacity">
-        <h1><b>HI! I'M EDUARDO
-            GRIFO</b></h1>
+      <div class="w3-text-white w3-xlarge w3-wide w3-animate-opacity w3-hide-small">
+        <h1><b>HI! I'M EDUARDO GRIFO</b></h1>
+      </div>
+      <div class="w3-text-white w3-xlarge w3-wide w3-animate-opacity w3-hide-medium w3-hide-large">
+        <h1><b>EDUARDO GRIFO</b></h1>
       </div>
       <div class="w3-text-white w3-xlarge w3-wide w3-animate-opacity">
         ROBOTICS AND SOFTWARE ENGINEER
@@ -301,7 +307,7 @@
           <i class="fa fa-envelope fa-fw w3-hover-text-black w3-xlarge w3-margin-right"></i> eduardo@grifo.io<br>
           <i class="fa fa-linkedin fa-fw w3-hover-text-black w3-xlarge w3-margin-right"></i> linkedin.com/in/egrifo/<br>
         </div>
-        <p>Swing by or leave me a note:</p>
+        <p>Swing by or leave me a message:</p>
         <form action="/action_page.php" target="_blank">
           <div class="w3-row-padding" style="margin:0 -16px 8px -16px">
             <div class="w3-half">
