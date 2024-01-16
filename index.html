@@ -83,6 +83,26 @@
       cursor: pointer;
     }
 
+    .bullet-grid {
+      display: grid;
+      grid-template-columns: repeat(4, 1fr);
+      gap: 20px;
+      /* Adjust the gap between bullet points */
+      max-width: 800px;
+      /* Adjust the maximum width of the grid */
+      margin: 20px auto;
+    }
+
+    .bullet {
+      text-align: center;
+    }
+
+    .bullet img {
+      max-width: 40%;
+      /* border-radius: 50%; */
+      /* Create a circular shape for the image */
+    }
+
     /* Turn off parallax scrolling for tablets and phones */
     @media only screen and (max-device-width: 1600px) {
 
@@ -154,15 +174,13 @@
     <h3 class="w3-center">ABOUT ME</h3>
     <!-- <p class="w3-center"><em>I love photography</em></p> -->
     <p>
-      I'm Eduardo Grifo, an experienced Robotics Engineer with over 6 years of hands-on
-      experience in both research and industry. I specialize in lidar-based systems, signal processing, automation,
-      control, and rigid body dynamics. Proficient in hardware and software development, including C/C++ and
-      Python programming languages, custom Linux environments, and embedded sensing systems. Possess valuable insights
-      from 3 years as a
-      research engineer at Fraunhofer Portugal AICOS and current
-      contributions as a Senior Robotics Engineer at BladeInsight. Dedicated
-      to implementing cutting-edge technologies and harnessing diverse skills
-      to drive innovative solutions in the robotics domain.</p>
+      I'm Eduardo Grifo, an experienced Robotics Engineer with over 6 years of hands-on experience in both research and
+      industry. I specialize in C/C++ and Python programming languages and have extensive experience with computational
+      mathematics and hardware and software development, including lidar-based systems, signal processing, automation,
+      control, rigid body dynamics, custom Linux environments, and embedded sensing systems. I possess valuable insights
+      from over 3 years as a research engineer at Fraunhofer Portugal AICOS and almost 4 years as a Senior Robotics
+      Engineer at BladeInsight. I am a team player and someone passionate about leveraging cutting-edge technologies and
+      diverse skills to create innovative solutions in the engineering and technology fields.</p>
     <div class="w3-row">
       <div class="w3-col m6 w3-center w3-padding-large">
         <!-- <p><b><i class="fa fa-user w3-margin-right"></i>My Name</b></p><br> -->
@@ -171,19 +189,79 @@
 
       <!-- Hide this text on small devices -->
       <div class="w3-col m6 w3-hide-small w3-padding-large">
-        <p>My skill set extends from C/C++, Python, Git, ROS, CI/CD, to Linux, ensuring code reliability through
-          rigorous validation and collaboration with cross-functional teams. Recognized as the go-to expert for critical
-          field missions, I thrive in high-pressure environments, ensuring seamless offshore deployments and resolving
-          issues swiftly. With a comprehensive background in hardware and software development, I've developed
-          perception and navigation algorithms using on-board sensors like LiDAR, cameras, and IMUs. Beyond professional
-          achievements, my voluntary work at Fraunhofer AICOS Portugal showcases my commitment to developing firmware
-          and hardware solutions for IoT applications. As a drone pilot with diverse technical skills and multilingual
-          proficiency, I bring a holistic approach to robotics and software development, making me a valuable asset in
-          this dynamic field.</p>
+        <p>I'm a multifaceted engineer with a knack for diving into complex challenges and emerging as a key
+          contributor. My toolbox counts with the presence of languages and technologies like C/C++, Python, Bash, Git,
+          ROS, Linux, and has been my constant companion in crafting innovative solutions. I am someone highly focused
+          on providing high quality code by applying tools like static checkers, unit testing (gtest), continuous
+          integration and deployment, all while adhering to best coding practices.
+
+          At Fraunhofer AICOS Portugal, I had the opportunity to work in projects related with embedded systems and IoT
+          applications working with tools such as Q format numbers and Yocto.
+
+          In my role as a Senior Robotics Engineer at BladeInsight, I further expanded my skillset with specialized
+          tools like the PCL library, the Ceres optimizer, Orocos and others.
+
+          I believe my professional journey has been a path of continuous learning and growth and I'm eager to
+          contribute this accumulated knowledge and experience to any future endeavor.
+        </p>
       </div>
     </div>
-    <p class="w3-large w3-center w3-padding-16">Im really good at:</p>
-    <p class="w3-wide"><i class="fa fa-camera"></i>Robotics</p>
+    <p class="w3-large w3-center w3-padding-16">I'm really good at:</p>
+
+    <div class="bullet-grid">
+      <div class="bullet">
+        <img src="assets/robot.png" alt="Robotics">
+        <p>Robotics</p>
+      </div>
+      <div class="bullet">
+        <img src="assets/cpu.png" alt="Embedded">
+        <p>Embedded Systems</p>
+      </div>
+      <div class="bullet w3-hide-small">
+        <img src="assets/sh_dev.png" alt="Embedded">
+        <p>Software and Hardware Development</p>
+      </div>
+      <div class="bullet w3-hide-medium w3-hide-large">
+        <img src="assets/sh_dev.png" alt="Embedded">
+        <p>SW & HW Development</p>
+      </div>
+      <div class="bullet">
+        <img src="assets/penguin_.png" alt="Linux">
+        <p>Linux</p>
+      </div>
+      <div class="bullet">
+        <img src="assets/cpp.png" alt="Cpp">
+        <p>C/C++</p>
+      </div>
+      <div class="bullet">
+        <img src="assets/python.png" alt="Python">
+        <p>Python</p>
+      </div>
+      <div class="bullet">
+        <img src="assets/terminal.png" alt="Bash">
+        <p>Bash</p>
+      </div>
+      <!-- <div class="bullet">
+        <img src="assets/map.png" alt="Navigation">
+        <p>Navigation</p>
+      </div>
+      <div class="bullet">
+        <img src="assets/perception.png" alt="Perception">
+        <p>Perception</p>
+      </div> -->
+      <div class="bullet w3-hide-small">
+        <img src="assets/algebra.png" alt="Math">
+        <p>Computational Math</p>
+      </div>
+      <div class="bullet w3-hide-medium w3-hide-large">
+        <img src="assets/algebra.png" alt="Math">
+        <p>Math</p>
+      </div>
+      <!-- Add more bullet points as needed -->
+    </div>
+
+
+    <!-- <p class="w3-wide"><i class="fa fa-camera"></i>Robotics</p>
     <div class="w3-light-grey">
       <div class="w3-container w3-padding-small w3-dark-grey w3-center" style="width:90%">90%</div>
     </div>
@@ -194,27 +272,44 @@
     <p class="w3-wide"><i class="fa fa-photo"></i>Photoshop</p>
     <div class="w3-light-grey">
       <div class="w3-container w3-padding-small w3-dark-grey w3-center" style="width:75%">75%</div>
-    </div>
+    </div> -->
   </div>
 
   <div class="w3-row w3-center w3-dark-grey w3-padding-16">
-    <div class="w3-quarter w3-section">
-      <span class="w3-xlarge">6+</span><br>
-      Years of experience
+    <div class="w3-half" style="padding: 12px 48px">
+      <div class="w3-medium w3-left-align w3-hide-small">"Eduardo demonstrated an impressive level of skill, dedication
+        and professionalism that made him an invaluable member of our team. (...) He is a flexible and organised person
+        that often exceeds expectations."</div>
+      <div class="w3-medium w3-left-align w3-hide-medium w3-hide-large">"Eduardo demonstrated an impressive level of
+        skill, dedication and professionalism that made him an invaluable member of our team."</div>
+      <div style="text-align: right;">Filipe Sousa - Head of Connected Things at Fraunhofer AICOS</div>
     </div>
-    <div class="w3-quarter w3-section">
-      <span class="w3-xlarge">55+</span><br>
-      Projects Done
-    </div>
-    <div class="w3-quarter w3-section">
-      <span class="w3-xlarge">89+</span><br>
-      Happy Clients
-    </div>
-    <div class="w3-quarter w3-section">
-      <span class="w3-xlarge">150+</span><br>
-      Meetings
+    <div class="w3-half" style="padding: 12px 48px">
+      <div class="w3-medium w3-left-align w3-hide-small">"I can only recommend Eduardo Grifo as an exceptional
+        problem-solver and an inspiring team member to work with. He's the one who made it through many times when
+        others said it was not possible. I am confident that he will bring immense value to any future organization, as
+        he did at BladeInsight."</div>
+      <div class="w3-medium w3-left-align w3-hide-medium w3-hide-large">"I can only recommend Eduardo Grifo as an
+        exceptional problem-solver and an inspiring team member to work with. He's the one who made it through many
+        times when others said it was not possible."</div>
+      <div style="text-align: right;">Illia Sheremet - Head of Robotics at BladeInsight</div>
     </div>
   </div>
+
+  <!-- <div class="w3-row w3-center w3-dark-grey w3-padding-16" style="display: flex; align-items: center;">
+    <div class="w3-half w3-padding-large">
+      <div class="w3-medium w3-left-align">"Eduardo demonstrated an impressive level of skill, dedication and
+        professionalism that made him an invaluable member of our team."</div>
+      <div style="text-align: right;">Filipe Sousa - Head of Connected Things at Fraunhofer AICOS</div>
+    </div>
+    <div class="w3-half w3-padding-large">
+      <div class="w3-medium w3-left-align">"I can only recommend Eduardo Grifo as an exceptional problem-solver and an
+        inspiring team member to work with. He's the one who made it through many times when others said it was not
+        possible. I am confident that he will bring immense value to any future organization, as he did at
+        BladeInsight."</div>
+      <div style="text-align: right;">Illia Sheremet - Head of Robotics at BladeInsight</div>
+    </div>
+  </div> -->
 
   <!-- Second Parallax Image with Portfolio Text -->
   <div class="bgimg-2 background-tint w3-display-container w3-opacity-min">
@@ -226,51 +321,54 @@
   <!-- Container (Portfolio Section) -->
   <div class="w3-content w3-container w3-padding-64" id="portfolio">
     <h3 class="w3-center">MY WORK</h3>
-    <p class="w3-center"><em>Here are some of my latest lorem work ipsum tipsum.<br> Click on the images to make them
-        bigger</em></p><br>
+    <p class="w3-center"><em>Professional career:</em></p><br>
 
     <!-- Responsive Grid. Four columns on tablets, laptops and desktops. Will stack on mobile devices/small screens (100% width) -->
     <div class="w3-row-padding w3-center">
       <div class="w3-col m3">
-        <img src="/w3images/p1.jpg" style="width:100%" onclick="onClick(this)" class="w3-hover-opacity"
-          alt="The mist over the mountains">
+        <img src="assets/tese.jpg" style="width:100%" onclick="onClick(this)" class="w3-hover-opacity"
+          alt="Indoor navigation of nano UAVs">
       </div>
 
       <div class="w3-col m3">
-        <img src="/w3images/p2.jpg" style="width:100%" onclick="onClick(this)" class="w3-hover-opacity"
-          alt="Coffee beans">
+        <img src="assets/kallisto.png" style="width:100%" onclick="onClick(this)" class="w3-hover-opacity"
+          alt="Development of the firmware, use case applications and communication drivers of the Kallisto platform provided by Sensry">
       </div>
 
       <div class="w3-col m3">
-        <img src="/w3images/p3.jpg" style="width:100%" onclick="onClick(this)" class="w3-hover-opacity"
-          alt="Bear closeup">
+        <img src="assets/duos.png" style="width:100%" onclick="onClick(this)" class="w3-hover-opacity"
+          alt="Development of the custom linux distributin running on the Duos Gateway IoT from Tekon Electronics">
       </div>
 
       <div class="w3-col m3">
-        <img src="/w3images/p4.jpg" style="width:100%" onclick="onClick(this)" class="w3-hover-opacity"
-          alt="Quiet ocean">
+        <img src="assets/bladeinsight.jpeg" style="width:100%" onclick="onClick(this)" class="w3-hover-opacity"
+          alt="BladeInsight">
       </div>
     </div>
 
+    <p class="w3-center"><em>Personal projects:</em></p><br>
+
+
     <div class="w3-row-padding w3-center w3-section">
       <div class="w3-col m3">
-        <img src="/w3images/p5.jpg" style="width:100%" onclick="onClick(this)" class="w3-hover-opacity" alt="The mist">
+        <img src="assets/skate.jpg" style="width:100%" onclick="onClick(this)" class="w3-hover-opacity"
+          alt="Electric skate to improve my commute">
       </div>
 
       <div class="w3-col m3">
-        <img src="/w3images/p6.jpg" style="width:100%" onclick="onClick(this)" class="w3-hover-opacity"
-          alt="My beloved typewriter">
+        <img src="assets/bl_speaker.jpg" style="width:100%" onclick="onClick(this)" class="w3-hover-opacity"
+          alt="Bluetooth speaker">
       </div>
 
       <div class="w3-col m3">
-        <img src="/w3images/p7.jpg" style="width:100%" onclick="onClick(this)" class="w3-hover-opacity"
-          alt="Empty ghost train">
+        <img src="assets/tedx.jpg" style="width:100%" onclick="onClick(this)" class="w3-hover-opacity"
+          alt="Built the stage logo and helped with the organization of the TEDx University of Porto">
       </div>
 
-      <div class="w3-col m3">
-        <img src="/w3images/p8.jpg" style="width:100%" onclick="onClick(this)" class="w3-hover-opacity" alt="Sailing">
-      </div>
-      <button class="w3-button w3-padding-large w3-light-grey" style="margin-top:64px">LOAD MORE</button>
+      <!-- <div class="w3-col m3">
+        <img src="assets/" style="width:100%" onclick="onClick(this)" class="w3-hover-opacity" alt="Sailing">
+      </div> -->
+      <!-- <button class="w3-button w3-padding-large w3-light-grey" style="margin-top:64px">LOAD MORE</button> -->
     </div>
   </div>
 
@@ -291,10 +389,9 @@
     </div>
   </div>
 
-  <!-- Container (Contact Section) -->
-  <div class="w3-content w3-container w3-padding-64" id="contact">
+  <!-- Container (Contact Section) - version with email -->
+  <!-- <div class="w3-content w3-container w3-padding-64" id="contact">
     <h3 class="w3-center">WHERE I WORK</h3>
-    <!-- <p class="w3-center"><em>I'd love your feedback!</em></p> -->
 
     <div class="w3-row w3-section">
       <div class="w3-col m4 w3-container" style="margin-top: inherit;">
@@ -303,7 +400,7 @@
       <div class="w3-col m8 w3-panel">
         <div class="w3-large w3-margin-bottom">
           <i class="fa fa-map-marker fa-fw w3-hover-text-black w3-xlarge w3-margin-right"></i> Porto, Portugal<br>
-          <i class="fa fa-phone fa-fw w3-hover-text-black w3-xlarge w3-margin-right"></i> ++351 919 151 132<br>
+          <i class="fa fa-phone fa-fw w3-hover-text-black w3-xlarge w3-margin-right"></i> +351 919 151 132<br>
           <i class="fa fa-envelope fa-fw w3-hover-text-black w3-xlarge w3-margin-right"></i> eduardo@grifo.io<br>
           <i class="fa fa-linkedin fa-fw w3-hover-text-black w3-xlarge w3-margin-right"></i> linkedin.com/in/egrifo/<br>
         </div>
@@ -322,6 +419,24 @@
             <i class="fa fa-paper-plane"></i> SEND MESSAGE
           </button>
         </form>
+      </div>
+    </div>
+  </div> -->
+
+  <!-- Container (Contact Section) - version without email-->
+  <div class="w3-content w3-container w3-padding-64" id="contact">
+    <h3 class="w3-center">WHERE I WORK</h3>
+    <div class="w3-row w3-section" style="display: flex; justify-content: center;">
+      <div class="w3-col m6 w3-container">
+        <img src="assets/porto.avif" class="w3-image w3-round w3-right" style="width:70%; margin-top: 0px;">
+      </div>
+      <div class="w3-col m6 w3-panel" style="display: flex; align-items: center;">
+        <div class="w3-large w3-margin-bottom">
+          <i class="fa fa-map-marker fa-fw w3-hover-text-black w3-xlarge w3-margin-right"></i> Porto, Portugal<br>
+          <i class="fa fa-phone fa-fw w3-hover-text-black w3-xlarge w3-margin-right"></i> +351 919 151 132<br>
+          <i class="fa fa-envelope fa-fw w3-hover-text-black w3-xlarge w3-margin-right"></i> eduardo@grifo.io<br>
+          <i class="fa fa-linkedin fa-fw w3-hover-text-black w3-xlarge w3-margin-right"></i> linkedin.com/in/egrifo/<br>
+        </div>
       </div>
     </div>
   </div>
