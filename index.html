@@ -3,7 +3,7 @@
 
 <head>
   <title>Eduardo Grifo</title>
-  <link rel="icon" href="assets/icon4.png" type="image/png">
+  <link rel="icon" href="assets/Robot_arm_icon.svg" type="image/svg">
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
@@ -101,6 +101,19 @@
       max-width: 40%;
       /* border-radius: 50%; */
       /* Create a circular shape for the image */
+    }
+
+    #img01 {
+      margin-top: -40px;
+    }
+
+    .modal-title {
+      text-align: center;
+    }
+
+    .modal-description {
+      text-align: left;
+      padding-left: 20px;
     }
 
     /* Turn off parallax scrolling for tablets and phones */
@@ -320,54 +333,169 @@
 
   <!-- Container (Portfolio Section) -->
   <div class="w3-content w3-container w3-padding-64" id="portfolio">
-    <h3 class="w3-center">MY WORK</h3>
-    <p class="w3-center"><em>Professional career:</em></p><br>
+    <h3 class="w3-center">Professional career</h3>
+    <!-- <h3 class="w3-center">MY WORK</h3>
+    <p class="w3-center"><em>Professional career:</em></p><br> -->
 
     <!-- Responsive Grid. Four columns on tablets, laptops and desktops. Will stack on mobile devices/small screens (100% width) -->
     <div class="w3-row-padding w3-center">
       <div class="w3-col m3">
-        <img src="assets/tese.jpg" style="width:100%" onclick="onClick(this)" class="w3-hover-opacity"
-          alt="Indoor navigation of nano UAVs">
+        <img src="assets/tese.jpg" style="width:100%" onclick="onClick(this)" class="w3-hover-opacity" alt="Master Thesis: Development of a Software Framework for Indoor Mini Drone Applications || 
+          In my master thesis, conducted in partnership with Fraunhofer AICOS, I focused on developing a
+          software framework to facilitate the creation of applications utilizing mini drones in indoor environments.
+          The project involved customizing the Crazyflie 2.0 platform, making it suitable for this specific
+          application. The goal was to provide a tool that would simplify the process for developers to integrate
+          mini drones into diverse indoor settings.
+          One of the key applications demonstrated in this project was the use of drones in a retail environment.
+          This illustrated the practical utility and versatility of the framework in a real-world scenario. The
+          portfolio includes an image showing the modified Crazyflie 2.0 platform on my hand, along with a screenshot
+          depicting the drone's use in a retail setting. For a detailed insight into the project, the complete master
+          thesis is accessible <a href='https://hdl.handle.net/10216/107646' target='_blank'>here</a>. This work represents a step towards more
+          accessible and adaptable use of mini drones in indoor applications.">
       </div>
+
 
       <div class="w3-col m3">
         <img src="assets/kallisto.png" style="width:100%" onclick="onClick(this)" class="w3-hover-opacity"
-          alt="Development of the firmware, use case applications and communication drivers of the Kallisto platform provided by Sensry">
+          alt="Development of Kallisto - A Versatile IoT Hardware Platform ||
+          During my tenure at Fraunhofer, I was involved in the development of Kallisto, a low-consumption,
+          low-profile IoT hardware platform. This project, in collaboration with Sensry, focused on creating a
+          highly adaptable device tailored for a wide range of IoT applications. Kallisto stands out for its
+          integration of diverse sensors, including an IMU (Inertial Measurement Unit) and various ambient sensors
+          like a barometer. Moreover, it features advanced specifications such as wireless charging, making it a
+          cutting-edge solution in the IoT space. My role extended beyond the development of the hardware and
+          firmware; I was instrumental in devising multiple use case applications. These applications not only
+          showcased the platform's capabilities but also served as a foundational platform for other projects and
+          clients. The versatility of Kallisto allows for its direct application or customization according to
+          specific IoT needs, highlighting its utility in various scenarios. For more detailed information about
+          Kallisto's specifications and capabilities, the product description can be found at Sensry's Kallisto
+          Platform Overview. My contribution to this project reflects a blend of technical expertise and practical
+          application, emphasizing the potential of IoT technology in modern solutions. More information about the
+          kallisto platform can be found at <a href='https://sensry.net/wp-content/uploads/2022/08/SY020-PCB-FLY001.pdf' target='_blank'>Sensry</a>">
       </div>
 
       <div class="w3-col m3">
-        <img src="assets/duos.png" style="width:100%" onclick="onClick(this)" class="w3-hover-opacity"
-          alt="Development of the custom linux distributin running on the Duos Gateway IoT from Tekon Electronics">
+        <img src="assets/goliveclip.png" style="width:100%" onclick="onClick(this)" class="w3-hover-opacity" alt="GoLiveClip Project: Development of Activity Monitoring Algorithms ||
+          In collaboration with
+          Gociety, I contributed to the development of the GoLiveClip, a wearable device designed primarily for elderly
+          users, but also suitable for a broader audience. The GoLiveClip is a multifunctional wearable that provides
+          functionalities like fall detection, emergency alerting, activity monitoring, and fall risk
+          estimation. My specific role in this project involved the development of the activity monitoring algorithms.
+          The primary challenge was optimizing these algorithms for minimal battery consumption and ensuring they
+          delivered accurate results on a hardware platform with limited capabilities. Notably, the device lacked
+          floating-point arithmetic, adding complexity to the task of creating efficient yet effective algorithms. For more information on the GoLiveClip and
+          its features, the product description can be accessed at <a href='https://www.goliveclip.eu/solutions/goliveclip/' target='_blank'>GoLiveClip by Gociety</a>. My work on this project
+          showcases the application of algorithm development skills in a real-world context, particularly in optimizing
+          performance for constrained hardware environments.">
       </div>
 
       <div class="w3-col m3">
-        <img src="assets/bladeinsight.jpeg" style="width:100%" onclick="onClick(this)" class="w3-hover-opacity"
-          alt="BladeInsight">
+        <img src="assets/duos.png" style="width:100%" onclick="onClick(this)" class="w3-hover-opacity" alt="Custom Linux Distribution for Tekon Electronics' Duos Gateway ||
+          During my time at Fraunhofer, I engaged in a notable project involving the development of a custom Linux
+          distribution using Yocto Project 4.0. This specialized distribution was designed for the Duos gateway IoT, a
+          product of Tekon Electronics, detailed at
+          <a href='https://www.tekonelectronics.com/pt/produtos/sistemas-sem-fios/sistema-sem-fios-duos/duos-gateway-iot-tekon-electronics-/' target='_blank'>Tekon Electronics - Duos Gateway IoT</a>.
+          The primary objective of this initiative was to create a tailored operating system that would seamlessly integrate
+          with the Duos gateway IoT's hardware capabilities and requirements.
+          The project extended beyond the development of the custom Linux distribution. A significant aspect of my work
+          involved creating several software modules that were integral to the functionality of the gateway. One such
+          module was designed for cloud connectivity, ensuring the gateway could efficiently communicate with
+          cloud-based services. This was vital for enhancing the gateway's capabilities in data management and remote
+          accessibility.
+          My role in this project highlights the application of software development and system integration skills in
+          creating customized solutions for specific hardware platforms. The success of this project demonstrates the
+          importance of bespoke software development in enhancing the capabilities and performance of dedicated hardware
+          like the Duos gateway IoT.">
+      </div>
+
+      <div class="w3-col m3">
+        <img src="assets/bladeinsight.png" style="width:100%" onclick="onClick(this)" class="w3-hover-opacity" alt="Development and Launch of BladeExplorer 3D, an autonomous drone solution for high-quality external blade data ||
+          In a significant robotics project spanning nearly four years, I played a pivotal role in developing an
+          autonomous UAV-based solution for inspecting wind turbines. Joining the team during its proof-of-concept stage,
+          I contributed substantially through to its successful product launch. This solution, now operational in over 10
+          countries, has serviced 958 turbines, encompassing 48 unique models, within just a year of its launch.
+          My expertise was particularly instrumental in critical field missions, where I was recognized as the go-to
+          specialist. My deep understanding of the system was crucial in resolving issues quickly and ensuring smooth
+          operation. A notable achievement was the successful deployment of our solution in offshore environments,
+          demonstrating adaptability and competence in high-pressure, challenging conditions.
+          My technical contributions encompassed developing advanced perception and navigation algorithms for the UAVs,
+          utilizing sensors like LiDAR, cameras, and IMUs. My work involved leveraging knowledge in areas such as forward
+          and inverse kinematics, optimization, collision-free motion planning, control system design, rigid body
+          dynamics, geometry, and linear algebra. I was also responsible for ensuring the reliability of the code through
+          extensive validation processes, including Hardware-In-The-Loop (HITL) simulations, Continuous
+          Integration/Continuous Deployment (CI/CD) strategies, static code analysis, and profiling. My approach to
+          maintaining code quality involved peer-reviewed processes via pull requests, with a keen awareness of compile
+          times.
+          During this project, I expanded my technical repertoire by learning and implementing third-party tools like PCL,
+          OMPL, Orocos, and the Ceres solver. The details of the UAV wind turbine inspection solution I worked on can be
+          found at <a href='https://www.bladeinsight.com/inspection-solutions.html#A' target='_blank'>BladeInsight
+            Inspection Solutions</a>. My time on this project not only contributed to its success but also significantly
+          enhanced my expertise in robotics and autonomous systems.">
       </div>
     </div>
 
-    <p class="w3-center"><em>Personal projects:</em></p><br>
+    <h3 class="w3-center" style="padding-top: 30px">Personal projects</h3>
+    <!-- <p class="w3-center"><em>Personal projects:</em></p><br> -->
 
 
     <div class="w3-row-padding w3-center w3-section">
       <div class="w3-col m3">
-        <img src="assets/skate.jpg" style="width:100%" onclick="onClick(this)" class="w3-hover-opacity"
-          alt="Electric skate to improve my commute">
+        <img src="assets/skate.jpg" style="width:100%" onclick="onClick(this)" class="w3-hover-opacity" alt="Custom-Built Electric Skateboard ||
+          This project involved building an electric skateboard for my daily commute. I started by crafting the board
+          itself, cutting and gluing the wood to create the base. For the mobility components, I selected appropriate
+          trucks and wheels and purchased the necessary electrical parts.
+          The skateboard is powered by two 8Ah batteries arranged in series and features a battery monitor for effective
+          power management. It's driven by a 250 kV motor, paired with a programmable VESC (Vedder Electronic Speed
+          Controller), which allows for customizable control over the skateboard's speed and acceleration.
+          I managed to test the skateboard up to a speed of 20 km/h, although it's capable of higher speeds. For
+          protection and aesthetics, I also made a custom plastic cover for the skateboard, though it's not visible in
+          the accompanying image. This project was a hands-on experience in electric vehicle assembly, combining
+          woodworking, electronics, and mechanical skills to create a practical commuting solution.">
       </div>
 
       <div class="w3-col m3">
-        <img src="assets/bl_speaker.jpg" style="width:100%" onclick="onClick(this)" class="w3-hover-opacity"
-          alt="Bluetooth speaker">
+        <img src="assets/bl_speaker.jpg" style="width:100%" onclick="onClick(this)" class="w3-hover-opacity" alt="DIY Portable Bluetooth Speaker ||
+          This personal project involved building a portable Bluetooth speaker from scratch. The speaker's enclosure
+          was handcrafted, with the main body made of pine and the front and back panels from plywood. It houses two 5W
+          drivers and is powered by a single 18650 cell battery, which provides about 5 hours of usage at full volume.
+          In the design, I implemented a 1:1 transformer to separate the power and logic systems, helping to reduce
+          feedback sounds. While the sound quality is decent, it's clear that there was no extensive sound dynamics
+          analysis during its construction. This was my first attempt at building a speaker, so while it has
+          imperfections in audio quality, its continued functioning after 7 years speaks to its durability.
+          This project was as much a learning experience as it was about building a usable product. In retrospect, there
+          are several aspects I would improve, especially in sound quality and material choice. The idea of creating a
+          second, improved version of this speaker is something I'm considering for the future.">
       </div>
 
       <div class="w3-col m3">
-        <img src="assets/tedx.jpg" style="width:100%" onclick="onClick(this)" class="w3-hover-opacity"
-          alt="Built the stage logo and helped with the organization of the TEDx University of Porto">
+        <img src="assets/tedx.jpg" style="width:100%" onclick="onClick(this)" class="w3-hover-opacity" alt="Building the TEDx University of Porto Stage Logo ||
+          For the TEDx event at the University of Porto, I undertook the task of constructing the stage logo. The logo
+          was crafted from several foam sheets, which were glued together and then covered with cardboard for additional
+          structure and stability. The final step in the construction process involved painting the assembled logo in
+          the traditional TEDx colors.
+          An interesting element of this project was the method I devised for cutting the foam sheets. I created a
+          homemade cutting device using a heat wire extracted from a hair dryer, which was then powered by a transformer
+          from an old laptop. This setup effectively heated the wire, allowing it to cut through the foam with
+          precision.
+          Apart from the construction of the logo, I was also involved in the broader organizational aspects of the TEDx
+          event.">
       </div>
 
-      <!-- <div class="w3-col m3">
-        <img src="assets/" style="width:100%" onclick="onClick(this)" class="w3-hover-opacity" alt="Sailing">
-      </div> -->
+
+      <p>
+
+
+      <div class="w3-col m3">
+        <img src="assets/download.jpeg" style="width:100%" onclick="onClick(this)" class="w3-hover-opacity" alt="DIY drones, both fixed-wing and a multirotor ||
+        I dedicated some of my free time to building two types of aircraft for personal enjoyment: a fixed-wing model
+        and a multirotor. The fixed-wing aircraft, known for its straightforward and stable flight pattern, was a
+        project that allowed me to explore traditional aviation design and aerodynamics. The multirotor, on the other
+        hand, offered a different experience with its agility and flexibility in flight.
+        Both projects required careful assembly of parts, balancing, and setting up control systems. This hobby was not
+        just for fun but also an application of my skills in areas like aerodynamics and remote control technology.
+        Flying these aircrafts provided a hands-on understanding of flight mechanics and the satisfaction of piloting
+        something I built myself.">
+      </div>
       <!-- <button class="w3-button w3-padding-large w3-light-grey" style="margin-top:64px">LOAD MORE</button> -->
     </div>
   </div>
@@ -435,7 +563,8 @@
           <i class="fa fa-map-marker fa-fw w3-hover-text-black w3-xlarge w3-margin-right"></i> Porto, Portugal<br>
           <i class="fa fa-phone fa-fw w3-hover-text-black w3-xlarge w3-margin-right"></i> +351 919 151 132<br>
           <i class="fa fa-envelope fa-fw w3-hover-text-black w3-xlarge w3-margin-right"></i> eduardo@grifo.io<br>
-          <i class="fa fa-linkedin fa-fw w3-hover-text-black w3-xlarge w3-margin-right"></i> linkedin.com/in/egrifo/<br>
+          <i class="fa fa-linkedin fa-fw w3-hover-text-black w3-xlarge w3-margin-right"></i> <a
+            style="text-decoration: none" href="https://www.linkedin.com/in/egrifo/">linkedin.com/in/egrifo/</a><br>
         </div>
       </div>
     </div>
@@ -461,8 +590,13 @@
     function onClick(element) {
       document.getElementById("img01").src = element.src;
       document.getElementById("modal01").style.display = "block";
+
+      var altTextParts = element.alt.split("||");
+      var title = altTextParts[0] || "";
+      var description = altTextParts[1] || "";
+
       var captionText = document.getElementById("caption");
-      captionText.innerHTML = element.alt;
+      captionText.innerHTML = "<strong class='modal-title'>" + title.trim() + "</strong><p class='modal-description'>" + description.trim() + "</p>";
     }
 
     // Change style of navbar on scroll
