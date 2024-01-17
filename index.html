@@ -116,6 +116,55 @@
       padding-left: 20px;
     }
 
+    .quote-carousel {
+      position: relative;
+      overflow: hidden;
+    }
+
+    .quote {
+      position: absolute;
+      top: 50%;
+      left: 50%;
+      transform: translate(-50%, -50%);
+      width: 100%;
+      /* Full width of the container */
+      opacity: 0;
+      transition: opacity 0.5s ease, transform 0.5s ease;
+      display: none;
+      /* Hide initially */
+    }
+
+    .quote.active {
+      opacity: 1;
+      display: block;
+      /* Show active quote */
+    }
+
+    .quote.next,
+    .quote.prev {
+      opacity: 0;
+      transform: translateX(-100%);
+    }
+
+    .carousel-control {
+      position: absolute;
+      top: 50%;
+      background-color: #fff;
+      border: none;
+      cursor: pointer;
+      padding: 10px;
+      z-index: 100;
+    }
+
+    .carousel-control.left {
+      left: 10px;
+    }
+
+    .carousel-control.right {
+      right: 10px;
+    }
+
+
     /* Turn off parallax scrolling for tablets and phones */
     @media only screen and (max-device-width: 1600px) {
 
@@ -288,8 +337,37 @@
     </div> -->
   </div>
 
+
+
+  <!-- <div class="w3-row w3-center w3-dark-grey w3-padding-16 quote-carousel">
+    <div class="w3-content w3-half quote" style="padding: 12px 48px">
+      <div class="w3-medium w3-left-align w3-hide-small">"Eduardo demonstrated an impressive level of skill,
+        dedication
+        and professionalism that made him an invaluable member of our team. (...) He is a flexible and organised
+        person
+        that often exceeds expectations."</div>
+      <div class="w3-medium w3-left-align w3-hide-medium w3-hide-large">"Eduardo demonstrated an impressive level of
+        skill, dedication and professionalism that made him an invaluable member of our team."</div>
+      <div style="text-align: right;">Filipe Sousa - Head of Connected Things at Fraunhofer AICOS</div>
+      <button class="carousel-control left">&lt;</button>
+      <button class="carousel-control right">&gt;</button>
+    </div>
+    <div class="w3-content w3-half quote" style="padding: 12px 48px">
+      <div class="w3-medium w3-left-align w3-hide-small">"I can only recommend Eduardo Grifo as an exceptional
+        problem-solver and an inspiring team member to work with. He's the one who made it through many times when
+        others said it was not possible. I am confident that he will bring immense value to any future organization,
+        as he did at BladeInsight."</div>
+      <div class="w3-medium w3-left-align w3-hide-medium w3-hide-large">"I can only recommend Eduardo Grifo as an
+        exceptional problem-solver and an inspiring team member to work with. He's the one who made it through many
+        times when others said it was not possible."</div>
+      <div style="text-align: right;">Illia Sheremet - Head of Robotics at BladeInsight</div>
+      <button class="carousel-control left">&lt;</button>
+      <button class="carousel-control right">&gt;</button>
+    </div>
+  </div> -->
+
   <div class="w3-row w3-center w3-dark-grey w3-padding-16">
-    <div class="w3-half" style="padding: 12px 48px">
+    <div class="w3-content" style="padding: 12px 48px">
       <div class="w3-medium w3-left-align w3-hide-small">"Eduardo demonstrated an impressive level of skill, dedication
         and professionalism that made him an invaluable member of our team. (...) He is a flexible and organised person
         that often exceeds expectations."</div>
@@ -297,7 +375,7 @@
         skill, dedication and professionalism that made him an invaluable member of our team."</div>
       <div style="text-align: right;">Filipe Sousa - Head of Connected Things at Fraunhofer AICOS</div>
     </div>
-    <div class="w3-half" style="padding: 12px 48px">
+    <div class="w3-content" style="padding: 12px 48px">
       <div class="w3-medium w3-left-align w3-hide-small">"I can only recommend Eduardo Grifo as an exceptional
         problem-solver and an inspiring team member to work with. He's the one who made it through many times when
         others said it was not possible. I am confident that he will bring immense value to any future organization, as
@@ -333,6 +411,9 @@
 
   <!-- Container (Portfolio Section) -->
   <div class="w3-content w3-container w3-padding-64" id="portfolio">
+
+    <p class="w3-center w3-hide-medium w3-hide-large">(Click on the images to expand them)</h3>
+
     <h3 class="w3-center">Professional career</h3>
     <!-- <h3 class="w3-center">MY WORK</h3>
     <p class="w3-center"><em>Professional career:</em></p><br> -->
@@ -340,42 +421,44 @@
     <!-- Responsive Grid. Four columns on tablets, laptops and desktops. Will stack on mobile devices/small screens (100% width) -->
     <div class="w3-row-padding w3-center">
       <div class="w3-col m3">
-        <img src="assets/tese.jpg" style="width:100%" onclick="onClick(this)" class="w3-hover-opacity" alt="Master Thesis: Development of a Software Framework for Indoor Mini Drone Applications || 
+        <img src="assets/portfolio_thesis_2.png" style="width:100%" onclick="onClick(this)" class="w3-hover-opacity"
+          alt="Master Thesis: Development of a Software Framework for Indoor Mini Drone Applications || 
           In my master thesis, conducted in partnership with Fraunhofer AICOS, I focused on developing a
           software framework to facilitate the creation of applications utilizing mini drones in indoor environments.
           The project involved customizing the Crazyflie 2.0 platform, making it suitable for this specific
           application. The goal was to provide a tool that would simplify the process for developers to integrate
-          mini drones into diverse indoor settings.
+          mini drones into diverse indoor settings using a monocular visual odometry algorithm and sensors like a camera and IR distance sensors.
           One of the key applications demonstrated in this project was the use of drones in a retail environment.
           This illustrated the practical utility and versatility of the framework in a real-world scenario. The
           portfolio includes an image showing the modified Crazyflie 2.0 platform on my hand, along with a screenshot
           depicting the drone's use in a retail setting. For a detailed insight into the project, the complete master
-          thesis is accessible <a href='https://hdl.handle.net/10216/107646' target='_blank'>here</a>. This work represents a step towards more
-          accessible and adaptable use of mini drones in indoor applications.">
+          thesis is accessible <a href='https://hdl.handle.net/10216/107646' target='_blank'>here</a>. This project marked
+          my initial foray into and provided a substantial learning opportunity in areas such as visual odometry, SLAM
+          (Simultaneous Localization and Mapping), drone hardware, and state-of-the-art drone technologies.">
       </div>
 
 
       <div class="w3-col m3">
-        <img src="assets/kallisto.png" style="width:100%" onclick="onClick(this)" class="w3-hover-opacity"
+        <img src="assets/portfolio_kallisto.png" style="width:100%" onclick="onClick(this)" class="w3-hover-opacity"
           alt="Development of Kallisto - A Versatile IoT Hardware Platform ||
           During my tenure at Fraunhofer, I was involved in the development of Kallisto, a low-consumption,
           low-profile IoT hardware platform. This project, in collaboration with Sensry, focused on creating a
           highly adaptable device tailored for a wide range of IoT applications. Kallisto stands out for its
           integration of diverse sensors, including an IMU (Inertial Measurement Unit) and various ambient sensors
-          like a barometer. Moreover, it features advanced specifications such as wireless charging, making it a
-          cutting-edge solution in the IoT space. My role extended beyond the development of the hardware and
+          like a barometer. Moreover, it features specifications such as wireless charging, making it a
+          cutting-edge solution in the IoT space for its size. My role extended beyond the development of the hardware and
           firmware; I was instrumental in devising multiple use case applications. These applications not only
           showcased the platform's capabilities but also served as a foundational platform for other projects and
           clients. The versatility of Kallisto allows for its direct application or customization according to
           specific IoT needs, highlighting its utility in various scenarios. For more detailed information about
-          Kallisto's specifications and capabilities, the product description can be found at Sensry's Kallisto
-          Platform Overview. My contribution to this project reflects a blend of technical expertise and practical
-          application, emphasizing the potential of IoT technology in modern solutions. More information about the
-          kallisto platform can be found at <a href='https://sensry.net/wp-content/uploads/2022/08/SY020-PCB-FLY001.pdf' target='_blank'>Sensry</a>">
+          Kallisto's specifications and capabilities, the product description can be found at
+          <a href='https://sensry.net/wp-content/uploads/2022/08/SY020-PCB-FLY001.pdf' target='_blank'>Sensry's Kallisto
+          Platform Overview</a>. My contribution to this project reflects a blend of technical expertise and practical
+          application in the field of IoT technology.">
       </div>
 
       <div class="w3-col m3">
-        <img src="assets/goliveclip.png" style="width:100%" onclick="onClick(this)" class="w3-hover-opacity" alt="GoLiveClip Project: Development of Activity Monitoring Algorithms ||
+        <img src="assets/portfolio_golive.png" style="width:100%" onclick="onClick(this)" class="w3-hover-opacity" alt="GoLiveClip Project: Development of Activity Monitoring Algorithms ||
           In collaboration with
           Gociety, I contributed to the development of the GoLiveClip, a wearable device designed primarily for elderly
           users, but also suitable for a broader audience. The GoLiveClip is a multifunctional wearable that provides
@@ -390,9 +473,9 @@
       </div>
 
       <div class="w3-col m3">
-        <img src="assets/duos.png" style="width:100%" onclick="onClick(this)" class="w3-hover-opacity" alt="Custom Linux Distribution for Tekon Electronics' Duos Gateway ||
+        <img src="assets/portfolio_duos.png" style="width:100%" onclick="onClick(this)" class="w3-hover-opacity" alt="Custom Linux Distribution for Tekon Electronics' Duos Gateway ||
           During my time at Fraunhofer, I engaged in a notable project involving the development of a custom Linux
-          distribution using Yocto Project 4.0. This specialized distribution was designed for the Duos gateway IoT, a
+          distribution using the Yocto Project. This specialized distribution was designed for the Duos gateway IoT, a
           product of Tekon Electronics, detailed at
           <a href='https://www.tekonelectronics.com/pt/produtos/sistemas-sem-fios/sistema-sem-fios-duos/duos-gateway-iot-tekon-electronics-/' target='_blank'>Tekon Electronics - Duos Gateway IoT</a>.
           The primary objective of this initiative was to create a tailored operating system that would seamlessly integrate
@@ -408,13 +491,13 @@
           like the Duos gateway IoT.">
       </div>
 
-      <div class="w3-col m3">
-        <img src="assets/bladeinsight.png" style="width:100%" onclick="onClick(this)" class="w3-hover-opacity" alt="Development and Launch of BladeExplorer 3D, an autonomous drone solution for high-quality external blade data ||
+      <div class="w3-col m3 w3-center">
+        <img src="assets/portfolio_bi.png" style="width:100%" onclick="onClick(this)" class="w3-hover-opacity" alt="Development and Launch of BladeExplorer 3D, an autonomous drone solution for high-quality external blade data ||
           In a significant robotics project spanning nearly four years, I played a pivotal role in developing an
           autonomous UAV-based solution for inspecting wind turbines. Joining the team during its proof-of-concept stage,
           I contributed substantially through to its successful product launch. This solution, now operational in over 10
           countries, has serviced 958 turbines, encompassing 48 unique models, within just a year of its launch.
-          My expertise was particularly instrumental in critical field missions, where I was recognized as the go-to
+          My expertise was particularly instrumental in critical field missions, where I was often recognized as the go-to
           specialist. My deep understanding of the system was crucial in resolving issues quickly and ensuring smooth
           operation. A notable achievement was the successful deployment of our solution in offshore environments,
           demonstrating adaptability and competence in high-pressure, challenging conditions.
@@ -440,7 +523,7 @@
 
     <div class="w3-row-padding w3-center w3-section">
       <div class="w3-col m3">
-        <img src="assets/skate.jpg" style="width:100%" onclick="onClick(this)" class="w3-hover-opacity" alt="Custom-Built Electric Skateboard ||
+        <img src="assets/portfolio_skate.png" style="width:100%" onclick="onClick(this)" class="w3-hover-opacity" alt="Custom-Built Electric Skateboard ||
           This project involved building an electric skateboard for my daily commute. I started by crafting the board
           itself, cutting and gluing the wood to create the base. For the mobility components, I selected appropriate
           trucks and wheels and purchased the necessary electrical parts.
@@ -448,13 +531,14 @@
           power management. It's driven by a 250 kV motor, paired with a programmable VESC (Vedder Electronic Speed
           Controller), which allows for customizable control over the skateboard's speed and acceleration.
           I managed to test the skateboard up to a speed of 20 km/h, although it's capable of higher speeds. For
-          protection and aesthetics, I also made a custom plastic cover for the skateboard, though it's not visible in
-          the accompanying image. This project was a hands-on experience in electric vehicle assembly, combining
-          woodworking, electronics, and mechanical skills to create a practical commuting solution.">
+          protection and aesthetics, I also made a custom plastic cover for the skateboard using a thermoforming machine.
+          This project was a hands-on experience in electric vehicle assembly, combining
+          woodworking, electronics, and mechanical skills to create a fun commuting solution.">
       </div>
 
       <div class="w3-col m3">
-        <img src="assets/bl_speaker.jpg" style="width:100%" onclick="onClick(this)" class="w3-hover-opacity" alt="DIY Portable Bluetooth Speaker ||
+        <img src="assets/portfolio_bl_speaker.png" style="width:100%" onclick="onClick(this)" class="w3-hover-opacity"
+          alt="DIY Portable Bluetooth Speaker ||
           This personal project involved building a portable Bluetooth speaker from scratch. The speaker's enclosure
           was handcrafted, with the main body made of pine and the front and back panels from plywood. It houses two 5W
           drivers and is powered by a single 18650 cell battery, which provides about 5 hours of usage at full volume.
@@ -468,25 +552,20 @@
       </div>
 
       <div class="w3-col m3">
-        <img src="assets/tedx.jpg" style="width:100%" onclick="onClick(this)" class="w3-hover-opacity" alt="Building the TEDx University of Porto Stage Logo ||
+        <img src="assets/portfolio_tedx.png" style="width:100%" onclick="onClick(this)" class="w3-hover-opacity" alt="Building the TEDx University of Porto Stage Logo ||
           For the TEDx event at the University of Porto, I undertook the task of constructing the stage logo. The logo
           was crafted from several foam sheets, which were glued together and then covered with cardboard for additional
           structure and stability. The final step in the construction process involved painting the assembled logo in
           the traditional TEDx colors.
-          An interesting element of this project was the method I devised for cutting the foam sheets. I created a
-          homemade cutting device using a heat wire extracted from a hair dryer, which was then powered by a transformer
+          In order to cut the foam sheets. I created a homemade cutting device using a heat wire extracted from a hair dryer, which was then powered by a transformer
           from an old laptop. This setup effectively heated the wire, allowing it to cut through the foam with
           precision.
           Apart from the construction of the logo, I was also involved in the broader organizational aspects of the TEDx
           event.">
       </div>
 
-
-      <p>
-
-
       <div class="w3-col m3">
-        <img src="assets/download.jpeg" style="width:100%" onclick="onClick(this)" class="w3-hover-opacity" alt="DIY drones, both fixed-wing and a multirotor ||
+        <img src="assets/portfolio_rc.png" style="width:100%" onclick="onClick(this)" class="w3-hover-opacity" alt="DIY drones, both fixed-wing and a multirotor ||
         I dedicated some of my free time to building two types of aircraft for personal enjoyment: a fixed-wing model
         and a multirotor. The fixed-wing aircraft, known for its straightforward and stable flight pattern, was a
         project that allowed me to explore traditional aviation design and aerodynamics. The multirotor, on the other
@@ -554,11 +633,14 @@
   <!-- Container (Contact Section) - version without email-->
   <div class="w3-content w3-container w3-padding-64" id="contact">
     <h3 class="w3-center">WHERE I WORK</h3>
-    <div class="w3-row w3-section" style="display: flex; justify-content: center;">
+    <div class="w3-row w3-section" style="margin-top: inherit; justify-content: center;">
       <div class="w3-col m6 w3-container">
-        <img src="assets/porto.avif" class="w3-image w3-round w3-right" style="width:70%; margin-top: 0px;">
+        <img src="assets/porto.avif" class="w3-image w3-round w3-right w3-hide-small"
+          style="width:60%; margin-top: 0px;">
+        <img src="assets/porto.avif" class="w3-image w3-round w3-right w3-hide-medium w3-hide-large"
+          style="width:100%; margin-top: 0px;">
       </div>
-      <div class="w3-col m6 w3-panel" style="display: flex; align-items: center;">
+      <div class="w3-col m6 w3-panel" style="align-items: center;">
         <div class="w3-large w3-margin-bottom">
           <i class="fa fa-map-marker fa-fw w3-hover-text-black w3-xlarge w3-margin-right"></i> Porto, Portugal<br>
           <i class="fa fa-phone fa-fw w3-hover-text-black w3-xlarge w3-margin-right"></i> +351 919 151 132<br>
@@ -619,6 +701,45 @@
         x.className = x.className.replace(" w3-show", "");
       }
     }
+
+    document.addEventListener("DOMContentLoaded", function () {
+      const carousel = document.querySelector('.quote-carousel');
+      const quotes = document.querySelectorAll('.quote');
+      let activeIndex = 0;
+
+      // Function to calculate and set the maximum height
+      function setMaxHeight() {
+        let maxHeight = 0;
+        quotes.forEach(quote => {
+          maxHeight = Math.max(maxHeight, quote.offsetHeight);
+        });
+        carousel.style.height = `${maxHeight}px`;
+      }
+
+      function showQuote(index) {
+        quotes.forEach((quote, idx) => {
+          quote.classList.toggle('active', idx === index);
+        });
+        activeIndex = index;
+      }
+
+      function nextQuote() {
+        const nextIndex = (activeIndex + 1) % quotes.length;
+        showQuote(nextIndex);
+      }
+
+      function prevQuote() {
+        const prevIndex = (activeIndex - 1 + quotes.length) % quotes.length;
+        showQuote(prevIndex);
+      }
+
+      setInterval(nextQuote, 3000);
+      document.querySelector('.carousel-control.left').addEventListener('click', prevQuote);
+      document.querySelector('.carousel-control.right').addEventListener('click', nextQuote);
+
+      showQuote(activeIndex);
+      setMaxHeight(); // Set the maximum height once the content is loaded
+    });
   </script>
 
 </body>
