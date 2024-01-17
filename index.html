@@ -56,11 +56,6 @@
     .bgimg-1 div {
       margin-bottom: 10px;
       display: inline-block;
-      /* padding: 10px; */
-      /* Adjust this padding as needed for spacing */
-      /* background-color: rgba(0, 0, 0, 0.6); */
-      /* Adjust the background color as needed */
-      /* color: white; */
     }
 
     /* Second image (Portfolio) */
@@ -99,7 +94,6 @@
 
     .bullet img {
       max-width: 40%;
-      /* border-radius: 50%; */
       /* Create a circular shape for the image */
     }
 
@@ -115,55 +109,6 @@
       text-align: left;
       padding-left: 20px;
     }
-
-    .quote-carousel {
-      position: relative;
-      overflow: hidden;
-    }
-
-    .quote {
-      position: absolute;
-      top: 50%;
-      left: 50%;
-      transform: translate(-50%, -50%);
-      width: 100%;
-      /* Full width of the container */
-      opacity: 0;
-      transition: opacity 0.5s ease, transform 0.5s ease;
-      display: none;
-      /* Hide initially */
-    }
-
-    .quote.active {
-      opacity: 1;
-      display: block;
-      /* Show active quote */
-    }
-
-    .quote.next,
-    .quote.prev {
-      opacity: 0;
-      transform: translateX(-100%);
-    }
-
-    .carousel-control {
-      position: absolute;
-      top: 50%;
-      background-color: #fff;
-      border: none;
-      cursor: pointer;
-      padding: 10px;
-      z-index: 100;
-    }
-
-    .carousel-control.left {
-      left: 10px;
-    }
-
-    .carousel-control.right {
-      right: 10px;
-    }
-
 
     /* Turn off parallax scrolling for tablets and phones */
     @media only screen and (max-device-width: 1600px) {
@@ -195,9 +140,6 @@
       <a href="#about" class="w3-bar-item w3-button w3-hide-small"><i class="fa fa-user"></i> ABOUT</a>
       <a href="#portfolio" class="w3-bar-item w3-button w3-hide-small"><i class="fa fa-th"></i> PORTFOLIO</a>
       <a href="#contact" class="w3-bar-item w3-button w3-hide-small"><i class="fa fa-envelope"></i> CONTACT</a>
-      <!-- <a href="#" class="w3-bar-item w3-button w3-hide-small w3-right w3-hover-red">
-        <i class="fa fa-search"></i>
-      </a> -->
     </div>
 
     <!-- Navbar on small screens -->
@@ -205,15 +147,12 @@
       <a href="#about" class="w3-bar-item w3-button" onclick="toggleFunction()">ABOUT</a>
       <a href="#portfolio" class="w3-bar-item w3-button" onclick="toggleFunction()">PORTFOLIO</a>
       <a href="#contact" class="w3-bar-item w3-button" onclick="toggleFunction()">CONTACT</a>
-      <!-- <a href="#" class="w3-bar-item w3-button">SEARCH</a> -->
     </div>
   </div>
 
   <!-- First Parallax Image with Logo Text -->
   <div class="bgimg-1 background-tint w3-display-container w3-opacity-min" id="home">
     <div class="w3-display-middle w3-center">
-      <!-- <div class="w3-black w3-xlarge w3-wide w3-animate-opacity" style="padding: 10px 20px;">Eduardo
-        Grifo</div> -->
       <div class="w3-text-white w3-xlarge w3-wide w3-animate-opacity w3-hide-small">
         <h1><b>HI! I'M EDUARDO GRIFO</b></h1>
       </div>
@@ -224,7 +163,6 @@
         ROBOTICS AND SOFTWARE ENGINEER
       </div>
       <br>
-      <!-- <button class="w3-btn w3-grey w3-round">Button</button> -->
       <div class="w3-text-white w3-xlarge w3-wide w3-animate-opacity w3-button">
         <a href="assets/EduardoGrifoCV.pdf" style="text-decoration:none;">Download CV</a>
       </div>
@@ -234,7 +172,6 @@
   <!-- Container (About Section) -->
   <div class="w3-content w3-container w3-padding-64" id="about">
     <h3 class="w3-center">ABOUT ME</h3>
-    <!-- <p class="w3-center"><em>I love photography</em></p> -->
     <p>
       I'm Eduardo Grifo, an experienced Robotics Engineer with over 6 years of hands-on experience in both research and
       industry. I specialize in C/C++ and Python programming languages and have extensive experience with computational
@@ -245,7 +182,6 @@
       diverse skills to create innovative solutions in the engineering and technology fields.</p>
     <div class="w3-row">
       <div class="w3-col m6 w3-center w3-padding-large">
-        <!-- <p><b><i class="fa fa-user w3-margin-right"></i>My Name</b></p><br> -->
         <p><img src="assets/Eduardo_Grifo.png" class="w3-round w3-image" alt="Photo of Me" width="500" height="333"></p>
       </div>
 
@@ -321,50 +257,7 @@
       </div>
       <!-- Add more bullet points as needed -->
     </div>
-
-
-    <!-- <p class="w3-wide"><i class="fa fa-camera"></i>Robotics</p>
-    <div class="w3-light-grey">
-      <div class="w3-container w3-padding-small w3-dark-grey w3-center" style="width:90%">90%</div>
-    </div>
-    <p class="w3-wide"><i class="fa fa-laptop"></i>C/C++</p>
-    <div class="w3-light-grey">
-      <div class="w3-container w3-padding-small w3-dark-grey w3-center" style="width:85%">85%</div>
-    </div>
-    <p class="w3-wide"><i class="fa fa-photo"></i>Photoshop</p>
-    <div class="w3-light-grey">
-      <div class="w3-container w3-padding-small w3-dark-grey w3-center" style="width:75%">75%</div>
-    </div> -->
   </div>
-
-
-
-  <!-- <div class="w3-row w3-center w3-dark-grey w3-padding-16 quote-carousel">
-    <div class="w3-content w3-half quote" style="padding: 12px 48px">
-      <div class="w3-medium w3-left-align w3-hide-small">"Eduardo demonstrated an impressive level of skill,
-        dedication
-        and professionalism that made him an invaluable member of our team. (...) He is a flexible and organised
-        person
-        that often exceeds expectations."</div>
-      <div class="w3-medium w3-left-align w3-hide-medium w3-hide-large">"Eduardo demonstrated an impressive level of
-        skill, dedication and professionalism that made him an invaluable member of our team."</div>
-      <div style="text-align: right;">Filipe Sousa - Head of Connected Things at Fraunhofer AICOS</div>
-      <button class="carousel-control left">&lt;</button>
-      <button class="carousel-control right">&gt;</button>
-    </div>
-    <div class="w3-content w3-half quote" style="padding: 12px 48px">
-      <div class="w3-medium w3-left-align w3-hide-small">"I can only recommend Eduardo Grifo as an exceptional
-        problem-solver and an inspiring team member to work with. He's the one who made it through many times when
-        others said it was not possible. I am confident that he will bring immense value to any future organization,
-        as he did at BladeInsight."</div>
-      <div class="w3-medium w3-left-align w3-hide-medium w3-hide-large">"I can only recommend Eduardo Grifo as an
-        exceptional problem-solver and an inspiring team member to work with. He's the one who made it through many
-        times when others said it was not possible."</div>
-      <div style="text-align: right;">Illia Sheremet - Head of Robotics at BladeInsight</div>
-      <button class="carousel-control left">&lt;</button>
-      <button class="carousel-control right">&gt;</button>
-    </div>
-  </div> -->
 
   <div class="w3-row w3-center w3-dark-grey w3-padding-16">
     <div class="w3-content" style="padding: 12px 48px">
@@ -387,21 +280,6 @@
     </div>
   </div>
 
-  <!-- <div class="w3-row w3-center w3-dark-grey w3-padding-16" style="display: flex; align-items: center;">
-    <div class="w3-half w3-padding-large">
-      <div class="w3-medium w3-left-align">"Eduardo demonstrated an impressive level of skill, dedication and
-        professionalism that made him an invaluable member of our team."</div>
-      <div style="text-align: right;">Filipe Sousa - Head of Connected Things at Fraunhofer AICOS</div>
-    </div>
-    <div class="w3-half w3-padding-large">
-      <div class="w3-medium w3-left-align">"I can only recommend Eduardo Grifo as an exceptional problem-solver and an
-        inspiring team member to work with. He's the one who made it through many times when others said it was not
-        possible. I am confident that he will bring immense value to any future organization, as he did at
-        BladeInsight."</div>
-      <div style="text-align: right;">Illia Sheremet - Head of Robotics at BladeInsight</div>
-    </div>
-  </div> -->
-
   <!-- Second Parallax Image with Portfolio Text -->
   <div class="bgimg-2 background-tint w3-display-container w3-opacity-min">
     <div class="w3-display-middle">
@@ -415,8 +293,6 @@
     <p class="w3-center w3-hide-medium w3-hide-large">(Click on the images to expand them)</h3>
 
     <h3 class="w3-center">Professional career</h3>
-    <!-- <h3 class="w3-center">MY WORK</h3>
-    <p class="w3-center"><em>Professional career:</em></p><br> -->
 
     <!-- Responsive Grid. Four columns on tablets, laptops and desktops. Will stack on mobile devices/small screens (100% width) -->
     <div class="w3-row-padding w3-center">
@@ -517,8 +393,6 @@
     </div>
 
     <h3 class="w3-center" style="padding-top: 30px">Personal projects</h3>
-    <!-- <p class="w3-center"><em>Personal projects:</em></p><br> -->
-
 
     <div class="w3-row-padding w3-center w3-section">
       <div class="w3-col m3">
@@ -574,7 +448,6 @@
         Flying these aircrafts provided a hands-on understanding of flight mechanics and the satisfaction of piloting
         something I built myself.">
       </div>
-      <!-- <button class="w3-button w3-padding-large w3-light-grey" style="margin-top:64px">LOAD MORE</button> -->
     </div>
   </div>
 
@@ -594,40 +467,6 @@
       <span class="w3-xxlarge w3-text-white w3-wide">CONTACT</span>
     </div>
   </div>
-
-  <!-- Container (Contact Section) - version with email -->
-  <!-- <div class="w3-content w3-container w3-padding-64" id="contact">
-    <h3 class="w3-center">WHERE I WORK</h3>
-
-    <div class="w3-row w3-section">
-      <div class="w3-col m4 w3-container" style="margin-top: inherit;">
-        <img src="assets/porto.avif" class="w3-image w3-round" style="width:100%; margin-top: 0px;">
-      </div>
-      <div class="w3-col m8 w3-panel">
-        <div class="w3-large w3-margin-bottom">
-          <i class="fa fa-map-marker fa-fw w3-hover-text-black w3-xlarge w3-margin-right"></i> Porto, Portugal<br>
-          <i class="fa fa-phone fa-fw w3-hover-text-black w3-xlarge w3-margin-right"></i> +351 919 151 132<br>
-          <i class="fa fa-envelope fa-fw w3-hover-text-black w3-xlarge w3-margin-right"></i> eduardo@grifo.io<br>
-          <i class="fa fa-linkedin fa-fw w3-hover-text-black w3-xlarge w3-margin-right"></i> linkedin.com/in/egrifo/<br>
-        </div>
-        <p>Swing by or leave me a message:</p>
-        <form action="/action_page.php" target="_blank">
-          <div class="w3-row-padding" style="margin:0 -16px 8px -16px">
-            <div class="w3-half">
-              <input class="w3-input w3-border" type="text" placeholder="Name" required name="Name">
-            </div>
-            <div class="w3-half">
-              <input class="w3-input w3-border" type="text" placeholder="Email" required name="Email">
-            </div>
-          </div>
-          <input class="w3-input w3-border" type="text" placeholder="Message" required name="Message">
-          <button class="w3-button w3-black w3-right w3-section" type="submit">
-            <i class="fa fa-paper-plane"></i> SEND MESSAGE
-          </button>
-        </form>
-      </div>
-    </div>
-  </div> -->
 
   <!-- Container (Contact Section) - version without email-->
   <div class="w3-content w3-container w3-padding-64" id="contact">
@@ -654,16 +493,6 @@
   <!-- Footer -->
   <footer class="w3-center w3-black w3-padding-64 w3-opacity w3-hover-opacity-off">
     <a href="#home" class="w3-button w3-light-grey"><i class="fa fa-arrow-up w3-margin-right"></i>To the top</a>
-    <!-- <div class="w3-xlarge w3-section">
-      <i class="fa fa-facebook-official w3-hover-opacity"></i>
-      <i class="fa fa-instagram w3-hover-opacity"></i>
-      <i class="fa fa-snapchat w3-hover-opacity"></i>
-      <i class="fa fa-pinterest-p w3-hover-opacity"></i>
-      <i class="fa fa-twitter w3-hover-opacity"></i>
-      <i class="fa fa-linkedin w3-hover-opacity"></i>
-    </div>
-    <p>Powered by <a href="https://www.w3schools.com/w3css/default.asp" title="W3.CSS" target="_blank"
-        class="w3-hover-text-green">w3.css</a></p> -->
   </footer>
 
   <script>
@@ -701,44 +530,6 @@
       }
     }
 
-    document.addEventListener("DOMContentLoaded", function () {
-      const carousel = document.querySelector('.quote-carousel');
-      const quotes = document.querySelectorAll('.quote');
-      let activeIndex = 0;
-
-      // Function to calculate and set the maximum height
-      function setMaxHeight() {
-        let maxHeight = 0;
-        quotes.forEach(quote => {
-          maxHeight = Math.max(maxHeight, quote.offsetHeight);
-        });
-        carousel.style.height = `${maxHeight}px`;
-      }
-
-      function showQuote(index) {
-        quotes.forEach((quote, idx) => {
-          quote.classList.toggle('active', idx === index);
-        });
-        activeIndex = index;
-      }
-
-      function nextQuote() {
-        const nextIndex = (activeIndex + 1) % quotes.length;
-        showQuote(nextIndex);
-      }
-
-      function prevQuote() {
-        const prevIndex = (activeIndex - 1 + quotes.length) % quotes.length;
-        showQuote(prevIndex);
-      }
-
-      setInterval(nextQuote, 3000);
-      document.querySelector('.carousel-control.left').addEventListener('click', prevQuote);
-      document.querySelector('.carousel-control.right').addEventListener('click', nextQuote);
-
-      showQuote(activeIndex);
-      setMaxHeight(); // Set the maximum height once the content is loaded
-    });
   </script>
 
 </body>
